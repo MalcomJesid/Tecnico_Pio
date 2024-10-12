@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--Menú-->
+    <header>
+        <div class="container">
+
+            <div class="top-bar">
+                <div class="logo">
+                    <img src="/img/Image20241007145557.png" alt="PioLogo">
+                </div>
+            </div>
+
+            <nav class="bottom-bar">
+                <ul>
+                    <li><a href="#">Agregar</a></li>
+                    <li><a href="#">filtros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+         <!--carrusel sencillo-->
+         <div class="carousel">
+            <div class="carousel-inner">
+                <img src="img/1.jpg" alt="Pelicula 1">
+                <img src="img/2.jpg" alt="Pelicula 2">
+                <img src="img/3.jpg" alt="Pelicula 3">
+                <img src="img/4.jpg" alt="Pelicula 4">
+                <img src="img/5.jpg" alt="Pelicula 5">
+                <img src="img/6.jpg" alt="Pelicula 6">
+                <img src="img/7.jpg" alt="Pelicula 7">
+                <img src="img/8.jpg" alt="Pelicula 8">
+                <img src="img/9.jpg" alt="Pelicula 9">
+                <img src="img/10.jpg" alt="Pelicula 10">
+                <img src="img/11.jpg" alt="Pelicula 11">
+                <img src="img/12.jpg" alt="Pelicula 12">
+                <img src="img/13.jpg" alt="Pelicula 13">
+                <img src="img/14.jpg" alt="Pelicula 14">
+                <img src="img/15.jpg" alt="Pelicula 15">
+                <img src="img/16.jpg" alt="Pelicula 16">
+                <img src="img/17.jpg" alt="Pelicula 17">
+                <img src="img/18.jpg" alt="Pelicula 18">
+                <img src="img/19.jpg" alt="Pelicula 19">
+                <img src="img/20.jpg" alt="Pelicula 20">
+                <img src="img/21.jpg" alt="Pelicula 21">
+                <img src="img/22.jpg" alt="Pelicula 22">
+                <img src="img/23.jpg" alt="Pelicula 23">
+                <img src="img/24.jpg" alt="Pelicula 24">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+        <!--Formulario de peliculas-->
+    <form id="addMovieform">
+        <label for="movietitle">Titulo:</label>
+        <input type="text" id="movietitle" placeholder="Titulo de la Pelicula" required>
+        
+        <label for="movieYear">Año</label>
+        <input type="number" id="movietitle" placeholder="Año de estreno" readonly> 
+
+        <label for="moviePoster" >post(URL)</label>
+        <input type="url" id="moviePoster" placeholder="post">
+
+        <button type="submit">Agregar Pelicula</button>
+    </form>
+
+    <!--Filtros y  opciones de orden-->
+
+    <div id="filters">
+            <label for="filterYear"></label>
+            <input type="number" id="filterYear" placeholder="estreno" readonly> 
+
+            <label for="sorMovie">Ordenar por:</label>
+            <select  id="sorMovie">
+                <option value="title">Titulo</option>
+                <option value="year">Año</option>
+            </select>
+
+            <button id="themtoggle">cambiar a modo oscuro</button>            
+    </div>
+
+    <!--contenedor para las targetas de peliculas-->
+
+    <div id="movielist">
+
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
